@@ -1,0 +1,201 @@
+<style type="text/css">
+    .foo {
+    float: left;
+    
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    .pending {
+      width: 20px;
+    height: 20px;
+      background: #FFF59D;
+    }
+
+    .requested {
+      width: 20px;
+    height: 20px;
+      background: #EF9A9A;
+    }
+
+    .changed {
+      width: 20px;
+    height: 20px;
+      background: #A5D6A7;
+    }
+
+    .left{
+        width:120px;
+        float:left;
+    }
+    .left table{
+        border-collapse: collapse;
+        border: 1px solid #38678f;
+        margin: 50px auto;
+        background: white;
+    }
+    .left td{
+        background:#eee;
+    }
+    .right{
+        width:100%;
+    }
+    .right table{
+        width:100%;
+        border-collapse: collapse;
+        border: 1px solid #38678f;
+        margin: 50px auto;
+        background: white;
+    }
+
+    .right tr{
+        border-bottom: 1px solid gray;
+      }
+
+    .right td{
+        text-align:center;
+        padding:5px;
+        border-right: 1px solid gray;
+        transition: all 0.2s;
+    }
+    .right td{
+      width: auto;
+      width: 1%;
+   white-space: nowrap;
+        background: #CFD8DC;
+    }
+    .right td.drop{
+        background:#fafafa;
+        width:200px;
+    }
+    .right td.over{
+        background:#FBEC88;
+    }
+    .right td.notover{
+        background:#E0ECFF;
+    }
+    .item{
+        text-align:center;
+        box-shadow: inset 0px 1px 2px #263238;
+        background-color:#fafafa;
+        color:#444;
+        padding: 2px;
+
+
+    }
+
+    .lunch{
+      background-color:white;
+      text-align:center;
+      width: auto;
+      padding: 2px;
+    }
+
+    .assigned{
+      text-align:center;
+      padding: 2px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);    }
+
+   .assignedpending{
+      background-color: #FFF59D;
+      text-align:center;
+      padding: 2px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);    }
+
+    .assignedrequested{
+          background-color: #EF9A9A;
+          text-align:center;
+          padding: 2px;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);    }
+
+    .assignedDone{
+          background-color: #A5D6A7;
+          text-align:center;
+          padding: 2px;
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);    }
+
+
+    .trash{
+        background-color:red;
+    }
+
+    td.title{
+      background: #78909C;
+      text-shadow: 0 1px 0 #263238;
+      color: white;
+      border: 1px solid #263238;
+      box-shadow: inset 0px 1px 2px #263238;
+      transition: all 0.2s;
+    }
+
+    td.time{
+      background: #78909C;
+      text-shadow: 0 1px 0 #263238;
+      color: white;
+      border: 1px solid #263238;
+      box-shadow: inset 0px 1px 2px #263238;
+      transition: all 0.2s;
+    }
+
+    td.blank{
+      background: #78909C;
+      font-weight: lighter;
+      text-shadow: 0 1px 0 #263238;
+      color: white;
+      border: 1px solid #263238;
+      box-shadow: inset 0px 1px 2px #263238;
+      transition: all 0.2s;
+    }
+
+
+
+
+    /* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+</style>
